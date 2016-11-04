@@ -46,8 +46,6 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -56,55 +54,33 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _messageExample = __webpack_require__(159);
+	var _todo = __webpack_require__(159);
 
-	var _messageExample2 = _interopRequireDefault(_messageExample);
-
-	var _link = __webpack_require__(161);
-
-	var _link2 = _interopRequireDefault(_link);
+	var _todo2 = _interopRequireDefault(_todo);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	// class App extends React.Component {
+	// 	render(){
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	// 		const url = 'http://jimeno0.github.io/';
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	// 		return(
+	// 			<div>
+	// 				<Message />
+	// 				<nav>
+	// 					<Link url={url} caption="My site" color="red"/>
+	// 					<Link url="https://www.github.com/jimeno0" caption="Github" color="green"/>
+	// 				</nav>
+	// 			</div>
 
-	var App = function (_React$Component) {
-		_inherits(App, _React$Component);
-
-		function App() {
-			_classCallCheck(this, App);
-
-			return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-		}
-
-		_createClass(App, [{
-			key: 'render',
-			value: function render() {
-
-				var url = 'http://jimeno0.github.io/';
-
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(_messageExample2.default, null),
-					_react2.default.createElement(
-						'nav',
-						null,
-						_react2.default.createElement(_link2.default, { url: url, caption: 'My site' }),
-						_react2.default.createElement(_link2.default, { url: 'https://www.github.com/jimeno0', caption: 'Github' })
-					)
-				);
-			}
-		}]);
-
-		return App;
-	}(_react2.default.Component);
-
-	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('container'));
+	// 		);
+	// 	}
+	// }
+	// ReactDOM.render(<App />, document.getElementById('container'));
+	_reactDom2.default.render(_react2.default.createElement(_todo2.default, null), document.getElementById('container'));
+	// import Message from './components/message-example1';
+	// import Link from './components/link';
 
 /***/ },
 /* 1 */
@@ -19864,9 +19840,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _helloExample = __webpack_require__(160);
+	var _task = __webpack_require__(160);
 
-	var _helloExample2 = _interopRequireDefault(_helloExample);
+	var _task2 = _interopRequireDefault(_task);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19876,41 +19852,38 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Message = function (_React$Component) {
-		_inherits(Message, _React$Component);
+	var Todo = function (_React$Component) {
+		_inherits(Todo, _React$Component);
 
-		function Message() {
-			_classCallCheck(this, Message);
+		function Todo() {
+			_classCallCheck(this, Todo);
 
-			return _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (Todo.__proto__ || Object.getPrototypeOf(Todo)).apply(this, arguments));
 		}
 
-		_createClass(Message, [{
+		_createClass(Todo, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					'div',
+					'ul',
 					null,
-					_react2.default.createElement(
-						'h1',
-						null,
-						'Hello world!!'
-					),
-					_react2.default.createElement(_helloExample2.default, { name: 'Carlos' })
+					_react2.default.createElement(_task2.default, { caption: 'Introduction', done: true }),
+					_react2.default.createElement(_task2.default, { caption: 'Chapter-1', done: true }),
+					_react2.default.createElement(_task2.default, { caption: 'Chapter-2', done: false })
 				);
 			}
 		}]);
 
-		return Message;
+		return Todo;
 	}(_react2.default.Component);
 
-	exports.default = Message;
+	exports.default = Todo;
 
 /***/ },
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -19930,81 +19903,44 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Hello = function (_React$Component) {
-		_inherits(Hello, _React$Component);
+	var Task = function (_React$Component) {
+		_inherits(Task, _React$Component);
 
-		function Hello() {
-			_classCallCheck(this, Hello);
+		function Task() {
+			var _ref;
 
-			return _possibleConstructorReturn(this, (Hello.__proto__ || Object.getPrototypeOf(Hello)).apply(this, arguments));
-		}
+			var _temp, _this, _ret;
 
-		_createClass(Hello, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'h1',
-					{ className: 'myStyle' },
-					'Hello ',
-					this.props.name,
-					'!!!! '
-				);
+			_classCallCheck(this, Task);
+
+			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+				args[_key] = arguments[_key];
 			}
-		}]);
 
-		return Hello;
-	}(_react2.default.Component);
-
-	exports.default = Hello;
-
-/***/ },
-/* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Link = function (_React$Component) {
-		_inherits(Link, _React$Component);
-
-		function Link() {
-			_classCallCheck(this, Link);
-
-			return _possibleConstructorReturn(this, (Link.__proto__ || Object.getPrototypeOf(Link)).apply(this, arguments));
+			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Task.__proto__ || Object.getPrototypeOf(Task)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+				checkbox: _this.props.done
+			}, _this.handleChangeChk = function (event) {
+				_this.setState({ checkbox: _this.state.checkbox === false ? true : false });
+			}, _temp), _possibleConstructorReturn(_this, _ret);
 		}
 
-		_createClass(Link, [{
-			key: 'render',
+		_createClass(Task, [{
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'a',
-					{ href: this.props.url },
+					"li",
+					null,
+					_react2.default.createElement("input", { type: "checkbox", checked: this.state.checkbox, onChange: this.handleChangeChk }),
+					" ",
 					this.props.caption
 				);
 			}
 		}]);
 
-		return Link;
+		return Task;
 	}(_react2.default.Component);
 
-	exports.default = Link;
+	exports.default = Task;
 
 /***/ }
 /******/ ]);
