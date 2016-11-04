@@ -1,7 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Hello from './components/hello-example1';
 import Message from './components/message-example1';
+import Link from './components/link';
  
-ReactDOM.render(<Message name='React' />, document.getElementById('container'));
+class App extends React.Component {
+	render(){
+
+		const url = 'http://jimeno0.github.io/';
+
+		return(
+			<div>
+				<Message />
+				<nav>
+					<Link url={url} caption="My site" />
+					<Link url="https://www.github.com/jimeno0" caption="Github" />
+				</nav>
+			</div>
+
+		);
+	}
+}
+
+
+ReactDOM.render(<App />, document.getElementById('container'));
 
