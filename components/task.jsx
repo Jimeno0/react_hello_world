@@ -2,18 +2,28 @@ import React from 'react';
 
 class Task extends React.Component {
 
-	state = {
-		checkbox: this.props.done
+	static propTypes = {
+		caption: React.PropTypes.string.isRequired,
+		done: React.PropTypes.bool
+	};
+
+	static defaultProps = {
+		done: true
 	}
 
-	handleChangeChk = (event) => {
-		this.setState({ checkbox: this.state.checkbox === false ? true : false })
+	state = {
+		updated: false
 	}
-	
+
+	handleClick = (evt) => {
+		this.setState({updated: this.state.updated ? false : true})
+	}
+
 	render(){
-		return(
-			<li>
-				<input type="checkbox" checked={this.state.checkbox} onChange={this.handleChangeChk} /> {this.props.caption}
+		return (
+			<li checked={this.props.done? 'checked' : false } onClick={this.handleClick}>
+				{this.props.caption}
+				{this.state.updated ? <small> Loading...</small> : false}
 			</li>
 		);
 	}

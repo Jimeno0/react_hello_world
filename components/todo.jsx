@@ -1,15 +1,22 @@
 import React from 'react';
-// import Task from './task';
-import Task from './task-def-props';
+import ReactDOM from 'react-dom';
+import Tasks from './tasks';
+import Task from './task';
 
 class Todo extends React.Component {
+
+	componentDidMount(){
+		const el = ReactDOM.findDOMNode(this.refs.first);
+		console.log(el);
+	}
+
 	render(){
 		return(
-			<ul>
-				<Task caption="Introduction" done/>
+			<Tasks>
+				<Task ref='first' caption="Introduction" done/>
 				<Task caption="chapter-1"/>
 				<Task caption="Chapter-2" done={false}/>
-			</ul>
+			</Tasks>
 		);	
 	}
 }
