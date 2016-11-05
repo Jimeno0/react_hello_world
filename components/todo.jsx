@@ -7,7 +7,7 @@ class Todo extends React.Component {
 		return(
 			<ul>
 				<Task caption="Introduction" done/>
-				<Task />
+				<Task caption="chapter-1"/>
 				<Task caption="Chapter-2" done={false}/>
 			</ul>
 		);	

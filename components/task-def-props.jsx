@@ -3,12 +3,11 @@ import React from 'react';
 class Task extends React.Component {
 
 	static propTypes = {
-		caption: React.PropTypes.string,
+		caption: React.PropTypes.string.isRequired,
 		done: React.PropTypes.bool
 	};
 
 	static defaultProps = {
-		caption: 'Unknow name',
 		done: true
 	}
 

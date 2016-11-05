@@ -54,33 +54,13 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _todo = __webpack_require__(159);
+	var _image = __webpack_require__(159);
 
-	var _todo2 = _interopRequireDefault(_todo);
+	var _image2 = _interopRequireDefault(_image);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// class App extends React.Component {
-	// 	render(){
-
-	// 		const url = 'http://jimeno0.github.io/';
-
-	// 		return(
-	// 			<div>
-	// 				<Message />
-	// 				<nav>
-	// 					<Link url={url} caption="My site" color="red"/>
-	// 					<Link url="https://www.github.com/jimeno0" caption="Github" color="green"/>
-	// 				</nav>
-	// 			</div>
-
-	// 		);
-	// 	}
-	// }
-	// ReactDOM.render(<App />, document.getElementById('container'));
-	_reactDom2.default.render(_react2.default.createElement(_todo2.default, null), document.getElementById('container'));
-	// import Message from './components/message-example1';
-	// import Link from './components/link';
+	_reactDom2.default.render(_react2.default.createElement(_image2.default, { src: 'http://jimeno0.github.io/svg/perfil-apaisado-pastel.svg', alt: 'Mi gepeto' }), document.getElementById('container'));
 
 /***/ },
 /* 1 */
@@ -19840,63 +19820,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _taskDefProps = __webpack_require__(160);
-
-	var _taskDefProps2 = _interopRequireDefault(_taskDefProps);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import Task from './task';
-
-
-	var Todo = function (_React$Component) {
-		_inherits(Todo, _React$Component);
-
-		function Todo() {
-			_classCallCheck(this, Todo);
-
-			return _possibleConstructorReturn(this, (Todo.__proto__ || Object.getPrototypeOf(Todo)).apply(this, arguments));
-		}
-
-		_createClass(Todo, [{
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'ul',
-					null,
-					_react2.default.createElement(_taskDefProps2.default, { caption: 'Introduction', done: true }),
-					_react2.default.createElement(_taskDefProps2.default, null),
-					_react2.default.createElement(_taskDefProps2.default, { caption: 'Chapter-2', done: false })
-				);
-			}
-		}]);
-
-		return Todo;
-	}(_react2.default.Component);
-
-	exports.default = Todo;
-
-/***/ },
-/* 160 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19905,40 +19828,26 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Task = function (_React$Component) {
-		_inherits(Task, _React$Component);
+	var Image = function (_React$Component) {
+		_inherits(Image, _React$Component);
 
-		function Task() {
-			_classCallCheck(this, Task);
+		function Image() {
+			_classCallCheck(this, Image);
 
-			return _possibleConstructorReturn(this, (Task.__proto__ || Object.getPrototypeOf(Task)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).apply(this, arguments));
 		}
 
-		_createClass(Task, [{
+		_createClass(Image, [{
 			key: 'render',
 			value: function render() {
-				return _react2.default.createElement(
-					'li',
-					null,
-					_react2.default.createElement('input', { type: 'checkbox', checked: this.props.done }),
-					this.props.caption,
-					'!!!!!'
-				);
+				return _react2.default.createElement('img', this.props);
 			}
 		}]);
 
-		return Task;
+		return Image;
 	}(_react2.default.Component);
 
-	Task.propTypes = {
-		caption: _react2.default.PropTypes.string,
-		done: _react2.default.PropTypes.bool
-	};
-	Task.defaultProps = {
-		caption: 'Unknow name',
-		done: true
-	};
-	exports.default = Task;
+	exports.default = Image;
 
 /***/ }
 /******/ ]);
