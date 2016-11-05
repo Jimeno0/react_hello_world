@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Todo from './components/todo';
+import Counter from './components/counter';
 
 
 
-ReactDOM.render(<Todo />, document.getElementById('container'));
+ReactDOM.render(<Counter initial={7} />, document.getElementById('container'));
 
